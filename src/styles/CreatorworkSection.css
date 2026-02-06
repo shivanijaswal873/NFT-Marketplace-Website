@@ -1,0 +1,99 @@
+.creator-section {
+  padding: 80px 0;
+  color: #fff;
+}
+.creator-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.creator-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.creator-header h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.creator-header p {
+  color: #bdbdbd;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.top-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.top-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding-bottom: 25px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.text {
+  color: grey;
+  font-size: 10px;
+  margin-top: 10px;
+}
+.top-card:hover {
+  transform: translateY(-8px);
+  background: rgb(181, 176, 176);
+}
+
+.top-card .bg {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.top-card .user {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #1a1333;
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+}
+
+.top-card h3 {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn {
+  width: 80%;
+  margin-top: 15px;
+  padding: 12px 0;
+  border-radius: 8px;
+  border: 2px solid #8f00ff;
+  background: linear-gradient(90deg, #8f00ff, #d600ff);
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #d600ff;
+  border-color: #d600ff;
+}
+
+

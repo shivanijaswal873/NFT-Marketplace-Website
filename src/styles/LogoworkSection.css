@@ -1,0 +1,19 @@
+.partners {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.partners-box {
+  width: 1197px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 21%;
+}
+
+.partners-box img {
+  height: 46px;
+  opacity: 0.7;
+}

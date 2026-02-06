@@ -1,0 +1,151 @@
+{
+  "featuredTitle": "Featured Artworks",
+  "featured": [
+    {
+      "image": "Rectangle 23.png",
+      "title": "Yellow Painting",
+      "currentBid": "0.005 ETH",
+      "name": "@Johny",
+      "category": "Sport"
+    },
+    {
+      "image": "colleaction2.png",
+      "title": "Yellow Painting",
+      "currentBid": "0.008 ETH",
+      "name": "@Johny",
+      "category": "Photography"
+    },
+    {
+      "image": "colleaction3.png",
+      "title": "Yellow Painting",
+      "currentBid": "0.01 ETH",
+      "name": "@Johny",
+      "category": "Pattern"
+    }
+  ],
+  "collectionTitle": "Collection",
+  "collection": [
+    {
+      "image": "Rectangle 23.png",
+      "title": "Yellow Painting",
+      "currentBid": "0.005 ETH",
+      "name": "@Johny",
+      "category": "Pattern"
+    },
+    {
+      "image": "colleaction2.png",
+      "title": "Yellow Painting",
+      "currentBid": "0.006 ETH",
+      "name": "@Johny",
+      "category": "Sport"
+    },
+    {
+      "image": "colleaction3.png",
+      "title": "Yellow Painting",
+      "currentBid": "0.007 ETH",
+      "name": "@Johny",
+      "category": "Photography"
+    },
+    {
+      "image": "colleaction4.png",
+      "title": "Yellow Painting",
+      "currentBid": "0.004 ETH",
+      "name": "@Johny",
+      "category": "Pattern"
+    },
+    {
+      "image": "colleaction5.png",
+      "title": "Yellow Painting",
+      "currentBid": "0.009 ETH",
+      "name": "@Johny",
+      "category": "Photography"
+    },
+    {
+      "image": "colleaction6.png",
+      "title": "Yellow Painting",
+      "currentBid": "0.003 ETH",
+      "name": "@Johny",
+      "category": "Photography"
+    },
+    {
+      "image": "colleaction7.jpg",
+      "title": "Yellow Painting",
+      "currentBid": "0.011 ETH",
+      "name": "@Johny",
+      "category": "Pattern"
+    },
+    {
+      "image": "colleaction8.jpg",
+      "title": "Yellow Painting",
+      "currentBid": "0.002 ETH",
+      "name": "@Johny",
+      "category": "Pattern"
+    },
+    {
+      "image": "colleaction9.jpg",
+      "title": "Yellow Painting",
+      "currentBid": "0.015 ETH",
+      "name": "@Johny",
+      "category": "Pattern"
+    }
+  ],
+  "creatorTitle": "Top Creator",
+  "creators": [
+    {
+      "bg": "creator1.jpg",
+      "user": "creator4.jpg",
+      "name": "John Wick",
+      "followed": false
+    },
+    {
+      "bg": "creator2.jpg",
+      "user": "creator5.jpg",
+      "name": "John Wick",
+      "followed": true
+    },
+    {
+      "bg": "creator3.jpg",
+      "user": "creator6.jpg",
+      "name": "John Wick",
+      "followed": false
+    }
+  ],
+  "logos": [
+    {
+      "id": 1,
+      "image": "Binance-logo.png",
+      "alt": "Binance"
+    },
+    {
+      "id": 2,
+      "image": "Ethereum-logo.png",
+      "alt": "Ethereum"
+    },
+    {
+      "id": 3,
+      "image": "Blockchain-logo.png",
+      "alt": "Blockchain"
+    }
+  ],
+  
+  "brand": {
+    "description": "The best NFT marketplace website in the world and feel your experience in selling or buy our work"
+  },
+  "sections": [
+    {
+      "title": "About",
+      "links": ["Product", "Resource", "Term & Condition", "FAQ"]
+    },
+    {
+      "title": "Company",
+      "links": ["Our Team", "Partner With Us", "Privacy & Policy", "Features"]
+    }
+  ],
+  "contact": {
+    "phone": "+012 3456789",
+    "email": "adorableprogrammer@gmail.com",
+    "socials": ["youtube", "discord", "instagram"]
+  },
+  "copyright": "Created by Zarror | All Right Reserved!"
+
+}
