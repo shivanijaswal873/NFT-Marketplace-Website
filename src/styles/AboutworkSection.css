@@ -78,3 +78,79 @@
 .about-btn:hover {
   transform: scale(1.05);
 }
+
+
+@media (max-width: 1024px) {
+  .about-content {
+    gap: 40px;
+  }
+
+  .about-image img {
+    width: 360px;
+    height: 420px;
+  }
+
+  .about-text h3 {
+    font-size: 30px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 0 16px;
+    margin-top: 40px;
+  }
+
+  .about-header h2 {
+    font-size: 32px;
+  }
+
+  .about-header p {
+    font-size: 14px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text h3 {
+    font-size: 26px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .about-btn {
+    padding: 10px 24px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .about-header h2 {
+    font-size: 28px;
+  }
+
+  .about-text h3 {
+    font-size: 22px;
+  }
+
+  .about-image img {
+    max-width: 280px;
+  }
+}
