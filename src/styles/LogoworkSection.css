@@ -6,14 +6,46 @@
 }
 
 .partners-box {
-  width: 1197px;
-  height: 60px;
+  width: 100%;
+  max-width: 1197px;
   display: flex;
   align-items: center;
-  gap: 21%;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .partners-box img {
   height: 46px;
+  max-width: 30%;
   opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .partners-box img {
+    height: 40px;
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners {
+    margin-top: 40px;
+  }
+
+  .partners-box {
+    padding: 0 16px;
+  }
+
+  .partners-box img {
+    height: 32px;
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-box img {
+    height: 26px;
+    max-width: 32%;
+  }
 }
