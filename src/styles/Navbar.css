@@ -27,7 +27,7 @@
   line-height: 100%;
   display: flex;
   align-items: center;
-  margin:0;
+  margin: 0;
   z-index: 102;
 }
 
@@ -90,6 +90,9 @@
 .nav-link + .nav-link {
   margin-left: 22px;
 }
+.nav-link:hover {
+  color: #b100ff;
+}
 
 .wallet-btn {
   margin-left: 22px;
@@ -103,6 +106,9 @@
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 .wallet-btn:hover {
   transform: scale(1.05);
@@ -166,7 +172,9 @@
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
-    transition: transform 0.3s, opacity 0.3s;
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
     z-index: 101;
   }
   .nav-links.open {
@@ -179,7 +187,7 @@
     width: 100%;
     padding: 18px 0 18px 10px;
     margin: 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 0;
   }
   .nav-link + .nav-link {
@@ -199,7 +207,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 100;
   }
 }
