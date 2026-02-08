@@ -79,7 +79,6 @@
   transform: scale(1.05);
 }
 
-
 @media (max-width: 1024px) {
   .about-content {
     gap: 40px;
@@ -95,7 +94,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .about-container {
     padding: 0 16px;
@@ -107,9 +105,13 @@
   }
 
   .about-header p {
-    font-size: 14px;
+    max-width: 520px;
+    margin: 10px auto 0;
+    text-align: center;
+    line-height: 1.6;
+    color: #cfcfcf;
+    font-size: 16px;
   }
-
   .about-content {
     flex-direction: column;
     gap: 32px;
@@ -139,7 +141,6 @@
     padding: 10px 24px;
   }
 }
-
 
 @media (max-width: 480px) {
   .about-header h2 {
