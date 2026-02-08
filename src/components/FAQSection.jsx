@@ -1,16 +1,9 @@
 import "../styles/FAQSection.css";
 import { useState } from "react";
-
-const faqs = [
-  "Lorem ipsum ipsum ?",
-  "Lorem ipsum ipsum ?",
-  "Lorem ipsum ipsum ?",
-  "Lorem ipsum ipsum ?",
-  "Lorem ipsum ipsum ?",
-  "Lorem ipsum ipsum ?",
-];
+import data from "../utils.json";
 
 export default function FAQSection() {
+  const { faqSection } = data;
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -21,25 +14,28 @@ export default function FAQSection() {
     <section className="faq-bg">
       <div className="faq-box">
         <h2>
-          Frequently Asked <br /> Question
+          {faqSection.title.map((line, i) => (
+            <span key={i}>
+              {line}
+              <br />
+            </span>
+          ))}
         </h2>
-        <p>Wanna Ask Something?</p>
+
+        <p>{faqSection.subtitle}</p>
 
         <div className="faq-grid">
-          {faqs.map((item, index) => (
+          {faqSection.faqs.map((faq, index) => (
             <div className="faq-item" key={index}>
               <div className="faq-row" onClick={() => toggleFAQ(index)}>
-                <span className="faq-question">{item}</span>
+                <span className="faq-question">{faq.question}</span>
                 <span className="faq-icon">
-                  {activeIndex === index ? "_" : "+"}
+                  {activeIndex === index ? "–" : "+"}
                 </span>
               </div>
 
               {activeIndex === index && (
-                <div className="faq-answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatem, explicabo, molestias deserunt officiis.
-                </div>
+                <div className="faq-answer">{faq.answer}</div>
               )}
             </div>
           ))}

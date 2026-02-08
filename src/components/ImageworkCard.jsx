@@ -2,7 +2,6 @@ export default function ArtworkCard({ image, title, currentBid }) {
   return (
     <section className="card">
       <img
-        // src={new URL(`../assets/${image}`, import.meta.url).href}
         src={new URL(`../assets/${image}`, import.meta.url).href}
         alt={title}
       />
