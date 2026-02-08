@@ -1,4 +1,11 @@
+const imageMap = import.meta.glob("../assets/*", {
+  eager: true,
+  as: "url",
+});
+
 export default function ArtworkCard({ image, title, currentBid }) {
+  const resolvedSrc = imageMap[`../assets/${image}`] || image;
+
   return (
     <section className="card">
       <img
