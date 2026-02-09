@@ -40,15 +40,21 @@ export default function Footer() {
           <p>{contact.email}</p>
 
           <div className="socials">
-            {contact.socials.map((icon, i) => (
-              <a href="#" key={i} className="social-icon">
-                {socialIcons[icon]}
+            {contact.socials.map((social, i) => (
+              <a
+                href={social.url}
+                key={i}
+                className="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {socialIcons[social.name]}
               </a>
             ))}
           </div>
         </div>
       </div>
-      
+
       <div className="footer-bottom">{copyright}</div>
     </footer>
   );
