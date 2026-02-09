@@ -56,18 +56,26 @@
 
 .faq-answer {
   margin-top: 10px;
-  padding-right: 30px;   
+  padding-right: 30px;
   font-size: 15px;
   line-height: 1.7;
   color: #ddd;
-  width: 100%;           
-  text-align: left;      
+  width: 100%;
+  text-align: left;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    max-height 0.55s cubic-bezier(0.25, 0.8, 0.25, 1),
+    opacity 0.35s ease,
+    transform 0.45s ease;
 }
-@media (max-width: 1024px) {
-  .faq-bg {
-    margin-top: 15px;
-    padding: 0 20px;
-  }
+
+.faq-answer.open {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
