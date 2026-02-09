@@ -23,9 +23,12 @@ export default function CreatorworkSection() {
         <div className="creator-header">
           <h2>{data.creatorTitle}</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur
-            <br />
-            adipiscing elit.
+            {data.creatorSubtitle.map((line, i) => (
+              <span key={i}>
+                {line}
+                <br />
+              </span>
+            ))}
           </p>
         </div>
 
@@ -41,11 +44,16 @@ export default function CreatorworkSection() {
               <h3>{item.name}</h3>
 
               <p className="text">
-                Lorem ipsum dolor sit amet, consectetur <br />
-                adipiscing elit.
+                {data.creatorCardText.map((line, idx) => (
+                  <span key={idx}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
               </p>
+
               <button className="btn">
-                {item.followed ? " + Followed" : "+ Follow"}
+                {item.followed ? "+ Followed" : "+ Follow"}
               </button>
             </div>
           ))}
