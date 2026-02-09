@@ -1,36 +1,34 @@
 import { useState } from "react";
-import ImageworkCard  from "../components/ImageworkCard.jsx";
+import ImageworkCard from "../components/ImageworkCard.jsx";
 import "../styles/ImageworkSection.css";
 
 export default function ImageworkSection({ title, imagesData = [], showTabs }) {
- const [activeTab, setActiveTab] = useState("All");
+  const [activeTab, setActiveTab] = useState("All");
 
   const tabs = showTabs
-    ? ["All", ...new Set(imagesData.map(i => i.category))]
+    ? ["All", ...new Set(imagesData.map((i) => i.category))]
     : [];
 
   const filteredItems =
     activeTab === "All"
       ? imagesData
-      : imagesData.filter(i => i.category === activeTab);
-
+      : imagesData.filter((i) => i.category === activeTab);
 
   return (
     <section className="collection">
       <div className="collection-container">
-
         <div className="collection-header">
           <h2>{title}</h2>
-           <p>
+          <p>
             Lorem ipsum dolor sit amet, consectetur
-           <br />
-           adipiscing elit.
+            <br />
+            adipiscing elit.
           </p>
         </div>
 
         {showTabs && (
           <div className="collection-tabs">
-            {tabs.map(tab => (
+            {tabs.map((tab) => (
               <button
                 key={tab}
                 className={`colleaction-button ${
@@ -48,13 +46,13 @@ export default function ImageworkSection({ title, imagesData = [], showTabs }) {
           {filteredItems.map((item, index) => (
             <ImageworkCard
               key={index}
-              image={item.image}   
+              image={item.image}
               title={item.title}
               currentBid={item.currentBid}
+              name={item.name}
             />
           ))}
         </div>
-
       </div>
     </section>
   );
