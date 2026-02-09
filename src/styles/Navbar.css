@@ -27,7 +27,6 @@
   line-height: 100%;
   display: flex;
   align-items: center;
-  margin: 0;
   z-index: 102;
 }
 
@@ -37,8 +36,8 @@
 
 .search {
   margin-left: 24px;
-  width: 360px;
-  height: 36px;
+  width: 384px;
+  height: 50px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -60,11 +59,12 @@
   outline: none;
   background: transparent;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .search input::placeholder {
   color: #cfcfcf;
+  
 }
 
 .nav-links {
@@ -79,7 +79,7 @@
   color: white;
   font-family: sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 541;
   line-height: 100%;
   padding: 6px 10px;
   display: flex;
@@ -109,6 +109,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  white-space: nowrap;
 }
 .wallet-btn:hover {
   transform: scale(1.05);
@@ -129,6 +130,10 @@
 }
 
 @media (max-width: 900px) {
+  .wallet-btn {
+    padding: 0 12px;
+    font-size: 12px;
+  }
   .search {
     width: 200px;
     min-width: 0;
@@ -199,6 +204,8 @@
     font-size: 16px;
     padding: 12px 0;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
   }
   .nav-overlay {
     display: block;
