@@ -36,8 +36,12 @@ export default function Footer() {
 
         <div className="footer-col">
           <h4>Contact</h4>
-          <p>{contact.phone}</p>
-          <p>{contact.email}</p>
+          <p>
+            <a href={`tel:${contact.phone}`}>{contact.phone}</a>
+          </p>
+          <p>
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          </p>
 
           <div className="socials">
             {contact.socials.map((social, i) => (
