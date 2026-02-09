@@ -2,8 +2,8 @@ import { useState } from "react";
 import ImageworkCard from "../components/ImageworkCard.jsx";
 import "../styles/ImageworkSection.css";
 
-export default function ImageworkSection({ title, imagesData = [], showTabs }) {
-  const [activeTab, setActiveTab] = useState("All");
+export default function ImageworkSection({ title, imagesData = [], showTabs,id }) {
+ const [activeTab, setActiveTab] = useState("All");
 
   const tabs = showTabs
     ? ["All", ...new Set(imagesData.map((i) => i.category))]
@@ -15,7 +15,9 @@ export default function ImageworkSection({ title, imagesData = [], showTabs }) {
       : imagesData.filter((i) => i.category === activeTab);
 
   return (
-    <section className="collection">
+    <section className="collection"  
+    id={id} 
+    >
       <div className="collection-container">
         <div className="collection-header">
           <h2>{title}</h2>

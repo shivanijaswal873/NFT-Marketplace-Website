@@ -3,9 +3,9 @@ import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import "../styles/Navbar.css";
 
 const navLinks = [
-  { name: "Collections", href: "#" },
-  { name: "Feature", href: "#" },
-  { name: "FAQ", href: "#" },
+  { name: "Collections", href: "#collections"},
+  { name: "Feature", href: "#feature" },
+  { name: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {
