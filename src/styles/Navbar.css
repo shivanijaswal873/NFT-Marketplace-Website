@@ -27,7 +27,6 @@
   line-height: 100%;
   display: flex;
   align-items: center;
-  margin:0;
   z-index: 102;
 }
 
@@ -37,8 +36,8 @@
 
 .search {
   margin-left: 24px;
-  width: 360px;
-  height: 36px;
+  width: 384px;
+  height: 50px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -79,7 +78,7 @@
   color: white;
   font-family: sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 541;
   line-height: 100%;
   padding: 6px 10px;
   display: flex;
@@ -89,6 +88,9 @@
 
 .nav-link + .nav-link {
   margin-left: 22px;
+}
+.nav-link:hover {
+  color: #b100ff;
 }
 
 .wallet-btn {
@@ -103,6 +105,10 @@
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
 }
 .wallet-btn:hover {
   transform: scale(1.05);
@@ -123,6 +129,10 @@
 }
 
 @media (max-width: 900px) {
+  .wallet-btn {
+    padding: 0 12px;
+    font-size: 12px;
+  }
   .search {
     width: 200px;
     min-width: 0;
@@ -166,7 +176,9 @@
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
-    transition: transform 0.3s, opacity 0.3s;
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
     z-index: 101;
   }
   .nav-links.open {
@@ -179,7 +191,7 @@
     width: 100%;
     padding: 18px 0 18px 10px;
     margin: 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 0;
   }
   .nav-link + .nav-link {
@@ -191,6 +203,8 @@
     font-size: 16px;
     padding: 12px 0;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
   }
   .nav-overlay {
     display: block;
@@ -199,7 +213,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 100;
   }
 }
