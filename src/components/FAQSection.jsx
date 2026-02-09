@@ -34,9 +34,11 @@ export default function FAQSection() {
                 </span>
               </div>
 
-              {activeIndex === index && (
-                <div className="faq-answer">{faq.answer}</div>
-              )}
+              <div
+                className={`faq-answer ${activeIndex === index ? "open" : ""}`}
+              >
+                {faq.answer}
+              </div>
             </div>
           ))}
         </div>

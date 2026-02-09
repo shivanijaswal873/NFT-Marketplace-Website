@@ -80,18 +80,10 @@
 }
 
 @media (max-width: 1024px) {
-  .about-content {
-    gap: 40px;
+  .about-container {
+    padding: 0 32px;
   }
 
-  .about-image img {
-    width: 360px;
-    height: 420px;
-  }
-
-  .about-text h3 {
-    font-size: 30px;
-  }
 }
 
 @media (max-width: 768px) {
