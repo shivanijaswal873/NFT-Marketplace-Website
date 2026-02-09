@@ -10,6 +10,7 @@
   width: 100%;
   max-width: 1200px;
   height: 320px;
+  min-height: 320px;
   background: linear-gradient(180deg, #b100ff, #7a00ff);
   border-radius: 16px;
   display: flex;
@@ -66,6 +67,10 @@
 }
 
 @media (max-width: 480px) {
+  .NFT-box {
+    padding: 30px 16px;
+  }
+
   .NFT-box h2 {
     font-size: 22px;
   }
