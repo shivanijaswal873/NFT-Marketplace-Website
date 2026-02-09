@@ -90,3 +90,68 @@
   font-size: 15px;
   color: #aaa;
 }
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 0 20px;
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 0 18px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-col.contact {   
+    grid-column: 1 / -1;  
+    text-align: center;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    margin-top: 25px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 0 25px;
+  }
+
+  .footer-grid {
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .footer-brand h3 {
+    font-size: 24px;
+  }
+
+  .footer-brand p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .footer-col h4 {
+    font-size: 17px;
+    margin-bottom: 16px;
+  }
+
+  .footer-col a,
+  .footer-col p {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+    font-size: 14px;
+  }
+}
