@@ -1,11 +1,14 @@
+const imageMap = import.meta.glob("../assets/*", {
+  eager: true,
+  as: "url",
+});
+
 export default function ArtworkCard({ image, title, currentBid }) {
+    const resolvedSrc = imageMap[`../assets/${image}`] || image;
+
   return (
     <section className="card">
-      <img
-        // src={new URL(`../assets/${image}`, import.meta.url).href}
-        src={new URL(`../assets/${image}`, import.meta.url).href}
-        alt={title}
-      />
+       <img src={resolvedSrc} alt={title} />
       <div className="card-info">
         <div className="card-row">
           <h4>{title}</h4>

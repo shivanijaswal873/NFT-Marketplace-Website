@@ -16,7 +16,9 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-section">
-        <div className="logo">Psycho<span>Art</span></div>
+        <div className="logo">
+          Psycho<span>Art</span>
+        </div>
 
         <div className="search">
           <FiSearch className="search-icon" />
@@ -25,14 +27,25 @@ export default function Navbar() {
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
           {navLinks.map((link, index) => (
-            <a key={index} className="nav-link" href={link.href} onClick={handleClose}>
+            <a
+              key={index}
+              className="nav-link"
+              href={link.href}
+              onClick={handleClose}
+            >
               {link.name}
             </a>
           ))}
-          <button className="wallet-btn" onClick={handleClose}>Select Wallet</button>
+          <a href="#" className="wallet-btn" onClick={handleClose}>
+            Select Wallet
+          </a>
         </nav>
 
-        <button className="menu-toggle" onClick={handleToggle} aria-label="Toggle menu">
+        <button
+          className="menu-toggle"
+          onClick={handleToggle}
+          aria-label="Toggle menu"
+        >
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
       </div>

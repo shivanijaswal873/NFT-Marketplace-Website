@@ -146,3 +146,58 @@
   color: #d600ff;
   border-color: #d600ff;
 }
+
+@media (max-width: 1024px) {
+  .collection {
+    margin-top: 100px;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collection {
+    margin-top: 80px;
+    padding: 0 24px;
+  }
+
+  .collection-container {
+    width: 100%;
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card img {
+    aspect-ratio: 4 / 5;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .collection {
+    margin-top: 60px;
+    padding: 0 16px;
+  }
+
+  .collection-header h2 {
+    font-size: 28px;
+  }
+
+  .collection-tabs {
+    flex-wrap: wrap;
+  }
+
+  .colleaction-button {
+    flex: 100%;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+}

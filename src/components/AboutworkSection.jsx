@@ -1,16 +1,22 @@
 import "../styles/AboutworkSection.css";
 import aboutImg from "../assets/aboutUs.jpg";
+import data from "../utils.json";
 
 export default function AboutSection() {
+  const { aboutSection } = data;
+
   return (
     <section className="about">
       <div className="about-container">
         <div className="about-header">
-          <h2>About Us</h2>
+          <h2>{aboutSection.title}</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur
-            <br />
-            adipiscing elit.
+            {aboutSection.subtitle.map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+              </span>
+            ))}
           </p>
         </div>
         <div className="about-content">
@@ -19,18 +25,12 @@ export default function AboutSection() {
           </div>
 
           <div className="about-text">
-            <h3>Get Popular NFT</h3>
+            <h3>{aboutSection.heading}</h3>
+            <p>{aboutSection.description}</p>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-              tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-              feugiat lectus. Class aptent taciti sociosqu ad litora torquent
-              per conubia nostra, per inceptos himenaeos. Praesent auctor purus
-              luctus enim egestas, ac scelerisque ante pulvinar.
-            </p>
-            <button className="about-btn">Show more</button>
+            {aboutSection.showButton && (
+              <button className="about-btn">{aboutSection.buttonText}</button>
+            )}
           </div>
         </div>
       </div>
