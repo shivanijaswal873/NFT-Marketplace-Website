@@ -35,10 +35,10 @@
 }
 
 .colleaction-button {
-  width: 288px;        
-  height: 40px;        
+  width: 288px;
+  height: 40px;
   padding: 0 24px;
-  border-radius: 10px; 
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -92,6 +92,14 @@
   margin-top: 16px;
 }
 
+.card-row {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
 .user {
   font-size: 14px;
   color: #dcd6e8;
@@ -104,7 +112,11 @@
   font-weight: 600;
   margin: 0;
 }
-
+.bid {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 600;
+}
 
 .bid small {
   display: block;
@@ -189,4 +201,3 @@
     height: auto;
   }
 }
-
