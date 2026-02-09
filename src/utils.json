@@ -133,6 +133,10 @@
       "id": 3,
       "image": "Blockchain-logo.png",
       "alt": "Blockchain"
+    },{
+      "id": 4,
+      "image": "Ethereum-logo.png",
+      "alt": "Ethereum"
     }
   ],
   "heroSection": {

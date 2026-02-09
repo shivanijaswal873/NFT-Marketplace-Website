@@ -13,6 +13,7 @@ export default function Logo() {
     loop: true,
     drag: false,
     renderMode: "performance",
+    mode: "free-snap",
     slides: {
       perView: 4,
       spacing: 50,
@@ -26,16 +27,14 @@ export default function Logo() {
       },
     },
     created(slider) {
-      slider.moveToIdx(0, true);
-
-      const animation = { duration: 6000, easing: (t) => t }; 
-
-      function move() {
-        slider.moveToIdx(slider.track.details.abs + 1, true, animation);
+      let raf;
+      function autoScroll() {
+        slider.track.to(slider.track.details.position + 0.002);
+        raf = requestAnimationFrame(autoScroll);
       }
+      autoScroll();
 
-      slider.on("animationEnded", move);
-      move();
+      slider.on("destroyed", () => cancelAnimationFrame(raf));
     },
   });
 
