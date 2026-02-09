@@ -29,18 +29,16 @@
 .collection-tabs {
   margin: 40px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
   width: 100%;
-  border-radius: 8px;
-  padding: 8px;
-  box-sizing: border-box;
 }
 
 .colleaction-button {
-  flex: 1;
-  padding: 14px 24px;
-  border-radius: 6px;
+  width: 288px;        
+  height: 40px;        
+  padding: 0 24px;
+  border-radius: 10px; 
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -48,6 +46,9 @@
   background: rgba(255, 255, 255, 0.08);
   color: white;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .colleaction-button:hover {
@@ -98,25 +99,12 @@
   margin-bottom: 8px;
 }
 
-.card-row {
-  margin-top: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 16px;
-}
-
 .card-row h4 {
   font-size: 18px;
   font-weight: 600;
   margin: 0;
 }
 
-.bid {
-  text-align: right;
-  font-size: 16px;
-  font-weight: 600;
-}
 
 .bid small {
   display: block;
@@ -201,3 +189,4 @@
     height: auto;
   }
 }
+
