@@ -11,7 +11,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="faq-bg">
+    <section className="faq-bg" id="faq" >
       <div className="faq-box">
         <h2>
           {faqSection.title.map((line, i) => (
