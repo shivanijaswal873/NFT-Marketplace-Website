@@ -4,7 +4,7 @@
   width: 100%;
 }
 .footer-grid {
-  max-width: 1200px; 
+  max-width: 1197px; 
   margin: 0 auto;      
   padding: 0 24px; 
   display: grid;
@@ -106,11 +106,7 @@
     grid-column: 1 / -1;
   }
 
-  .footer-col.contact {   
-    grid-column: 1 / -1;  
-    text-align: center;
-  }
-
+ 
   .socials {
     justify-content: center;
   }
