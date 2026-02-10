@@ -1,9 +1,29 @@
 import "../styles/HeroworkSection.css";
 import groupImage from "../assets/image1.png";
 import data from "../utils.json";
-
+import { useState, useEffect } from "react";
 export default function HeroSection() {
   const { heroSection } = data;
+
+  const [counts, setCounts] = useState(heroSection.stats.map(() => 0));
+
+  useEffect(() => {
+    const targets = heroSection.stats.map((s) => parseInt(s.value) * 1000);
+
+    const interval = setInterval(() => {
+      setCounts((prev) =>
+        prev.map((count, i) => {
+          const step = targets[i] / 50;
+          const next = count + step;
+          return next >= targets[i] ? targets[i] : next;
+        }),
+      );
+    }, 20);
+
+    setTimeout(() => clearInterval(interval), 2000);
+
+    return () => clearInterval(interval);
+  }, [heroSection.stats]);
 
   return (
     <section className="hero">
@@ -43,7 +63,7 @@ export default function HeroSection() {
           <div className="hero-stats">
             {heroSection.stats.map((stat, i) => (
               <div key={i}>
-                <h2>{stat.value}</h2>
+                <h2>{Math.floor(counts[i] / 1000)}k+</h2>
                 <span>{stat.label}</span>
               </div>
             ))}
