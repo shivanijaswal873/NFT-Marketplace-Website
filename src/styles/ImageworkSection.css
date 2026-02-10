@@ -192,12 +192,16 @@
   }
   .collection-tabs {
     flex-wrap: wrap;
+    gap: 12px;
   }
+
   .colleaction-button {
-    flex: 100%;
+    flex: 1 1 calc(50% - 12px);
+    max-width: calc(50% - 12px);
   }
+
   .collection-grid {
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
   }
   .card img {
     aspect-ratio: 1 / 1;
