@@ -3,7 +3,7 @@ import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import "../styles/Navbar.css";
 
 const navLinks = [
-  { name: "Collections", href: "#collections"},
+  { name: "Collections", href: "#collections" },
   { name: "Feature", href: "#feature" },
   { name: "FAQ", href: "#faq" },
 ];
@@ -13,11 +13,23 @@ export default function Navbar() {
   const handleToggle = () => setMenuOpen((prev) => !prev);
   const handleClose = () => setMenuOpen(false);
 
+  const handleScroll = (e, href) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+    handleClose();
+  };
+
   return (
     <header className="navbar">
       <div className="navbar-section">
-        
-        <a href="#home" className="logo" onClick={handleClose}>
+        <a
+          href="#home"
+          className="logo"
+          onClick={(e) => handleScroll(e, "#home")}
+        >
           Psycho<span>Art</span>
         </a>
 
@@ -32,7 +44,7 @@ export default function Navbar() {
               key={index}
               className="nav-link"
               href={link.href}
-              onClick={handleClose}
+              onClick={(e) => handleScroll(e, link.href)}
             >
               {link.name}
             </a>

@@ -7,31 +7,18 @@ import Lenis from "@studio-freight/lenis";
 
 function App() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100,
-      easing: "ease-in-out",
-      mirror: false,
-    });
+    AOS.init({ duration: 1000, once: true, offset: 100 });
 
-    AOS.refresh();
+    const lenis = new Lenis();
 
-    const lenis = new Lenis({
-      smooth: true,
-      lerp: 0.09,
-    });
-
-    function raf(time) {
+    const raf = (time) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
-    }
+    };
 
     requestAnimationFrame(raf);
 
-    return () => {
-      lenis.destroy();
-    };
+    return () => lenis.destroy();
   }, []);
 
   return <Page />;
