@@ -8,7 +8,7 @@
 
 .faq-box {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1197px;
   color: #fff;
   text-align: center;
 }
@@ -114,21 +114,29 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .faq-box {
-    padding: 0 15px;
+    padding: 0 30px;
   }
 
   .faq-box h2 {
-    font-size: 22px;
+    font-size: 32px;
+  }
+
+  .faq-box p {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .faq-grid {
+    gap: 25px;
   }
 
   .faq-question {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .faq-answer {
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 14px;
   }
 }
