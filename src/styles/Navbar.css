@@ -36,6 +36,7 @@
   display: flex;
   align-items: center;
   z-index: 102;
+  text-decoration: none;
 }
 
 .logo span {
