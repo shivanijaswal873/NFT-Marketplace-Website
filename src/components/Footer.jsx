@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
         ))}
 
-        <div className="footer-col">
+        <div className="footer-col contact">
           <h4>Contact</h4>
           <p>{contact.phone}</p>
           <p>{contact.email}</p>
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      
+
       <div className="footer-bottom">{copyright}</div>
     </footer>
   );

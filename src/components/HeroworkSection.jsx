@@ -1,40 +1,72 @@
-import groupImage from "../assets/image1.png";
 import "../styles/HeroworkSection.css";
-
+import groupImage from "../assets/image1.png";
+import data from "../utils.json";
+import { useState, useEffect } from "react";
 export default function HeroSection() {
+  const { heroSection } = data;
+
+  const [counts, setCounts] = useState(heroSection.stats.map(() => 0));
+
+  useEffect(() => {
+    const targets = heroSection.stats.map((s) => parseInt(s.value) * 1000);
+
+    const interval = setInterval(() => {
+      setCounts((prev) =>
+        prev.map((count, i) => {
+          const step = targets[i] / 50;
+          const next = count + step;
+          return next >= targets[i] ? targets[i] : next;
+        }),
+      );
+    }, 20);
+
+    setTimeout(() => clearInterval(interval), 2000);
+
+    return () => clearInterval(interval);
+  }, [heroSection.stats]);
+
   return (
     <section className="hero">
       <div className="hero-container">
         <div className="hero-left">
           <h1 className="text1">
-            Create, Sell & <br />
-            Collect Your Own <br />
-            Creative NFT
+            {heroSection.title.map((line, i) => (
+              <span key={i}>
+                {line}
+                <br />
+              </span>
+            ))}
           </h1>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur <br />
-            adipiscing elit. Nunc vulputate libero et velit.
+            {heroSection.subtitle.map((line, i) => (
+              <span key={i}>
+                {line}
+                <br />
+              </span>
+            ))}
           </p>
 
           <div className="hero-buttons">
-            <button className="btn-primary">Explore Now</button>
-            <button className="btn-secondary">Sell NFT</button>
+            {heroSection.buttons.map((btn, i) => (
+              <button
+                key={i}
+                className={
+                  btn.type === "primary" ? "btn-primary" : "btn-secondary"
+                }
+              >
+                {btn.text}
+              </button>
+            ))}
           </div>
 
           <div className="hero-stats">
-            <div>
-              <h2>37k+</h2>
-              <span>Artworks</span>
-            </div>
-            <div>
-              <h2>20k+</h2>
-              <span>Artists</span>
-            </div>
-            <div>
-              <h2>99k+</h2>
-              <span>Auctions</span>
-            </div>
+            {heroSection.stats.map((stat, i) => (
+              <div key={i}>
+                <h2>{Math.floor(counts[i] / 1000)}k+</h2>
+                <span>{stat.label}</span>
+              </div>
+            ))}
           </div>
         </div>
 

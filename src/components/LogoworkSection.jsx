@@ -1,16 +1,53 @@
 import "../styles/LogoworkSection.css";
 import data from "../utils.json";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+
+const logoMap = import.meta.glob("../assets/*", {
+  eager: true,
+  as: "url",
+});
 
 export default function Logo() {
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    drag: false,
+    renderMode: "performance",
+    mode: "free-snap",
+    slides: {
+      perView: 4,
+      spacing: 50,
+    },
+    breakpoints: {
+      "(max-width: 1024px)": {
+        slides: { perView: 3 },
+      },
+      "(max-width: 768px)": {
+        slides: { perView: 2 },
+      },
+    },
+    created(slider) {
+      let raf;
+      function autoScroll() {
+        slider.track.to(slider.track.details.position + 0.002);
+        raf = requestAnimationFrame(autoScroll);
+      }
+      autoScroll();
+
+      slider.on("destroyed", () => cancelAnimationFrame(raf));
+    },
+  });
+
   return (
     <section className="partners">
-      <div className="partners-box">
+      <div ref={sliderRef} className="keen-slider">
         {data.logos.map((item) => (
-          <img
-            key={item.id}
-            src={new URL(`../assets/${item.image}`, import.meta.url).href}
-            alt={item.alt}
-          />
+          <div key={item.id} className="keen-slider__slide">
+            <img
+              src={logoMap[`../assets/${item.image}`] || item.image}
+              alt={item.alt}
+            />
+          </div>
         ))}
       </div>
     </section>
