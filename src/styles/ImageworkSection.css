@@ -112,6 +112,7 @@
   font-weight: 600;
   margin: 0;
 }
+
 .bid {
   text-align: right;
   font-size: 16px;
@@ -131,11 +132,9 @@
   padding: 12px 0;
   border-radius: 8px;
   border: 2px solid #8f00ff;
-  background: transparent;
   background: linear-gradient(90deg, #8f00ff, #d600ff);
-  color: #d600ff;
-  cursor: pointer;
   color: white;
+  cursor: pointer;
   font-size: 15px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -148,9 +147,19 @@
 }
 
 @media (max-width: 1024px) {
-  .collection {
-    margin-top: 100px;
-    padding: 0 40px;
+  .collection-container {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .colleaction-button {
+    flex: 1 1 200px;
+    max-width: 220px;
   }
 }
 
@@ -177,13 +186,11 @@
 @media (max-width: 576px) {
   .collection {
     margin-top: 60px;
-    padding: 0 16px;
   }
 
   .collection-header h2 {
     font-size: 28px;
   }
-
   .collection-tabs {
     flex-wrap: wrap;
   }
