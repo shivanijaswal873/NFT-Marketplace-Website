@@ -1,6 +1,8 @@
 import "../styles/AboutworkSection.css";
 import aboutImg from "../assets/aboutUs.jpg";
 import data from "../utils.json";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function AboutSection() {
   const { aboutSection } = data;
@@ -19,17 +21,20 @@ export default function AboutSection() {
             ))}
           </p>
         </div>
+
         <div className="about-content">
-          <div className="about-image">
-            <img src={aboutImg} alt="About NFT" />
+          <div className="about-image" data-aos="fade-right" data-aos-once="true">
+            <img src={aboutImg} alt="About NFT"  onLoad={() => AOS.refresh()} />
           </div>
 
-          <div className="about-text">
+          <div className="about-text" data-aos="fade-left" data-aos-once="true">
             <h3>{aboutSection.heading}</h3>
             <p>{aboutSection.description}</p>
 
             {aboutSection.showButton && (
-              <button className="about-btn">{aboutSection.buttonText}</button>
+              <button className="about-btn">
+                {aboutSection.buttonText}
+              </button>
             )}
           </div>
         </div>
