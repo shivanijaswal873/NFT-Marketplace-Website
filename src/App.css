@@ -15,6 +15,6 @@ body {
   margin-inline: auto;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  height: auto;
 }

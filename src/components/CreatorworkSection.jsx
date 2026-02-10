@@ -32,7 +32,7 @@ export default function CreatorworkSection() {
           </p>
         </div>
 
-        <div className="top-grid">
+        <div className="top-grid" data-aos="fade-up">
           {data.creators.map((item, i) => (
             <div
               className={`top-card ${item.followed ? "active" : ""}`}

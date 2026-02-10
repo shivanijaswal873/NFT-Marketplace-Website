@@ -44,7 +44,7 @@ export default function ImageworkSection({ title, imagesData = [], showTabs,id }
           </div>
         )}
 
-        <div className="collection-grid">
+        <div className="collection-grid" data-aos="fade-up">
           {filteredItems.map((item, index) => (
             <ImageworkCard
               key={index}
