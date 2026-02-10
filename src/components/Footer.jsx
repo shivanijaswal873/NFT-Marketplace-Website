@@ -15,9 +15,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-grid">
         <div className="footer-brand">
-          <h3>
-            Psycho<span>Art</span>
-          </h3>
+        <a href="#home" className="logo" >
+          Psycho<span>Art</span>
+        </a>
           <p>{brand.description}</p>
         </div>
 
