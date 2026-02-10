@@ -3,8 +3,9 @@
   color: #fff;
 }
 .creator-container {
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  padding: 0 24px;
+  max-width: 1197px;
   margin: auto;
 }
 
@@ -96,18 +97,7 @@
   transition: all 0.3s ease;
 }
 
-
-
 @media (max-width: 768px) {
-
-  .creator-section {
-    padding: 60px 6px;
-  }
-
-  .creator-container {
-    width: 92%;
-  }
-
   .creator-header h2 {
     font-size: 28px;
   }
@@ -148,7 +138,6 @@
 }
 
 @media (max-width: 480px) {
-
   .creator-header h2 {
     font-size: 24px;
   }
