@@ -47,7 +47,13 @@
 }
 .top-card:hover {
   transform: translateY(-8px);
-  background: rgb(181, 176, 176);
+  background: rgb(173, 165, 165);
+  border: 1px solid rgba(143, 0, 255, 0.35);
+}
+
+.top-card:hover .btn {
+  background: rgb(173, 165, 165);
+  border: 1px solid rgba(143, 0, 255, 0.35);
 }
 
 .top-card .bg {
@@ -90,11 +96,7 @@
   transition: all 0.3s ease;
 }
 
-.btn:hover {
-  background: transparent;
-  color: #d600ff;
-  border-color: #d600ff;
-}
+
 
 @media (max-width: 768px) {
 
