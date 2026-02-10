@@ -16,9 +16,10 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-section">
-        <div className="logo">
+        
+        <a href="#home" className="logo" onClick={handleClose}>
           Psycho<span>Art</span>
-        </div>
+        </a>
 
         <div className="search">
           <FiSearch className="search-icon" />
