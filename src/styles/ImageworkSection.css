@@ -134,7 +134,7 @@ padding:0 24px;
 .collection-grid{
 grid-template-columns:repeat(2,389px);
 justify-content:center;
-gap:24px;
+gap:190px;
 }
 }
 
