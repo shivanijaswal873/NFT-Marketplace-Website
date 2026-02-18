@@ -9,6 +9,7 @@
 .faq-box {
   width: 100%;
   max-width: 1197px;
+  height: 484px;
   color: #fff;
   text-align: center;
 }
@@ -45,7 +46,9 @@
 }
 
 .faq-question {
-  font-size: 18px;
+  font-size: 20px;
+  width: 259.99px;
+  height: 30.1px;
 }
 
 .faq-icon {

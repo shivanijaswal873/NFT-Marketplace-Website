@@ -1,5 +1,7 @@
 import ImageworkSection from "./ImageworkSection";
 import data from "../utils.json";
+import "../styles/ImageworkSection.css";
+
 
 export default function Feature() {
   return (
