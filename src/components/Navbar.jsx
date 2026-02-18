@@ -3,9 +3,9 @@ import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import "../styles/Navbar.css";
 
 const navLinks = [
-  { name: "Collections", href: "#collections" },
-  { name: "Feature", href: "#feature" },
-  { name: "FAQ", href: "#faq" },
+  { name: "Collections", href: "#collections", className: "collections" },
+  { name: "Feature", href: "#feature", className: "feature" },
+  { name: "FAQ", href: "#faq", className: "faq" },
 ];
 
 export default function Navbar() {
@@ -25,11 +25,8 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-section">
-        <a
-          href="#home"
-          className="logo"
-          onClick={(e) => handleScroll(e, "#home")}
-        >
+
+        <a href="#home" className="logo" onClick={handleClose}>
           Psycho<span>Art</span>
         </a>
 
@@ -42,7 +39,7 @@ export default function Navbar() {
           {navLinks.map((link, index) => (
             <a
               key={index}
-              className="nav-link"
+              className={`nav-link ${link.className}`}
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
             >
