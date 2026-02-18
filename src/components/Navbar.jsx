@@ -13,6 +13,15 @@ export default function Navbar() {
   const handleToggle = () => setMenuOpen((prev) => !prev);
   const handleClose = () => setMenuOpen(false);
 
+  const handleScroll = (e, href) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+    handleClose();
+  };
+
   return (
     <header className="navbar">
       <div className="navbar-section">
@@ -32,7 +41,7 @@ export default function Navbar() {
               key={index}
               className={`nav-link ${link.className}`}
               href={link.href}
-              onClick={handleClose}
+              onClick={(e) => handleScroll(e, link.href)}
             >
               {link.name}
             </a>

@@ -2,6 +2,7 @@ import "../styles/HeroworkSection.css";
 import groupImage from "../assets/image1.png";
 import data from "../utils.json";
 import { useState, useEffect } from "react";
+
 export default function HeroSection() {
   const { heroSection } = data;
 
@@ -20,7 +21,7 @@ export default function HeroSection() {
       );
     }, 20);
 
-    setTimeout(() => clearInterval(interval), 2000);
+    setTimeout(() => clearInterval(interval), 3000);
 
     return () => clearInterval(interval);
   }, [heroSection.stats]);
@@ -28,7 +29,7 @@ export default function HeroSection() {
   return (
     <section className="hero">
       <div className="hero-container">
-        <div className="hero-left">
+        <div className="hero-left" data-aos="fade-right">
           <h1 className="text1">
             {heroSection.title.map((line, i) => (
               <span key={i}>
@@ -70,7 +71,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="hero-right">
+        <div className="hero-right" data-aos="fade-left">
           <img src={groupImage} alt="NFT Collection" />
         </div>
       </div>

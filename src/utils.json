@@ -133,7 +133,8 @@
       "id": 3,
       "image": "Blockchain-logo.png",
       "alt": "Blockchain"
-    },{
+    },
+    {
       "id": 4,
       "image": "Ethereum-logo.png",
       "alt": "Ethereum"
@@ -225,10 +226,15 @@
       "links": ["Our Team", "Partner With Us", "Privacy & Policy", "Features"]
     }
   ],
+  
   "contact": {
-    "phone": "+012 3456789",
-    "email": "adorableprogrammer@gmail.com",
-    "socials": ["youtube", "discord", "instagram"]
+    "phone": "+1234567890",
+    "email": "info@psychoart.com",
+    "socials": [
+      { "name": "youtube", "url": "https://youtube.com" },
+      { "name": "discord", "url": "https://discord.com" },
+      { "name": "instagram", "url": "https://instagram.com" }
+    ]
   },
   "copyright": "Created by Zarror | All Right Reserved!"
 }
