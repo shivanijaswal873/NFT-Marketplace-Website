@@ -162,63 +162,6 @@
 }
 
 
-/* @media(max-width:768px){
-
-  .footer-inner {
-      padding-left:20px;
-      padding-right:20px;
-  }
-  .footer-grid{
-      grid-template-columns:1fr 1fr;
-      grid-template-areas:
-        "brand abouts"
-        "company contact";
-      column-gap:24px;
-      row-gap:40px;
-      align-items:start;
-      width:100%;
-      justify-content:center;
-    text-align:center;
-    justify-items:center;
-    align-items:center;
-    width:100%;
-  }
-  .footer-brand {
-    margin-bottom:20px;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-  }
-  .footer-col {
-    margin-bottom:24px;
-    width:100%;
-    max-width:320px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-  }
-  .footer-col h4 {
-      padding-left:12px;
-      padding-right:12px;
-  .description{
-    margin-left:auto;
-      grid-template-columns:1fr;
-      grid-template-areas:
-        "brand"
-        "abouts"
-        "company"
-        "contact";
-      row-gap:36px;
-      column-gap:0;
-      text-align:center;
-      justify-items:center;
-      align-items:center;
-      width:100%;
-      margin:0 auto;
-  }
-}
-} */
  @media(max-width:768px){
 
   .footer-inner{
@@ -226,7 +169,6 @@
     padding-right:20px;
   }
 
-  /* GRID KO CONTENT WIDTH KAR DO */
   .footer-grid{
     grid-template-columns: auto;
     width:fit-content;
@@ -235,7 +177,6 @@
     justify-items:center;
   }
 
-  /* BRAND */
   .footer-brand{
     width:288px;
     display:flex;
@@ -244,7 +185,6 @@
     text-align:center;
   }
 
-  /* COLUMNS CENTER */
   .footer-col{
     display:flex;
     flex-direction:column;
