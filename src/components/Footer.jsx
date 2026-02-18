@@ -24,8 +24,8 @@ export default function Footer() {
           {sections.map((section, index) => (
             <div
               key={index}
-              className={`footer-col ${section.title.toLowerCase() === "about"
-                ? "about"
+              className={`footer-col ${section.title.toLowerCase() === "abouts"
+                ? "abouts"
                 : section.title.toLowerCase() === "company"
                   ? "company"
                   : ""
