@@ -3,18 +3,9 @@ import data from "../utils.json";
 import { FaYoutube, FaDiscord, FaInstagram } from "react-icons/fa";
 
 const socialIcons = {
-  youtube: {
-    icon: <FaYoutube />,
-    url: "https://youtube.com"
-  },
-  discord: {
-    icon: <FaDiscord />,
-    url: "https://discord.com"
-  },
-  instagram: {
-    icon: <FaInstagram />,
-    url: "https://instagram.com"
-  }
+  youtube: <FaYoutube />,
+  discord: <FaDiscord />,
+  instagram: <FaInstagram />,
 };
 
 export default function Footer() {
@@ -22,7 +13,6 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-
       <div className="footer-inner">
         <div className="footer-grid">
 
@@ -35,10 +25,10 @@ export default function Footer() {
             <div
               key={index}
               className={`footer-col ${section.title.toLowerCase() === "about"
-                  ? "about"
-                  : section.title.toLowerCase() === "company"
-                    ? "company"
-                    : ""
+                ? "about"
+                : section.title.toLowerCase() === "company"
+                  ? "company"
+                  : ""
                 }`}
             >
               <h4>{section.title}</h4>
@@ -68,26 +58,19 @@ export default function Footer() {
             </p>
 
             <div className="socials">
-              {contact.socials.map((name, i) => (
-                <a
-                  href={socialIcons[name].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key={i}
-                  className="social-icon"
-                >
-                  {socialIcons[name].icon}
+              {contact.socials.map((icon, i) => (
+                <a href="#" key={i} className="social-icon">
+                  {socialIcons[icon]}
                 </a>
               ))}
-            </div>
 
+            </div>
           </div>
 
         </div>
+        <div className="footer-bottom">{copyright}</div>
       </div>
-
-      <div className="footer-bottom">{copyright}</div>
-
     </footer>
+
   );
 }
