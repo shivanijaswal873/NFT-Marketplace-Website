@@ -137,23 +137,23 @@
 }
 
 
+
 @media(max-width:1200px){
+
   .footer-grid{
-      grid-template-columns:288px 133px 119px;
-      grid-template-areas:
-        "brand abouts company"
-        "contact contact contact";
-      row-gap:60px;
-      column-gap:40px;
-      justify-content:center;
+    grid-template-columns: 288px 133px 119px;
+    justify-content:center;
+    width:fit-content;
+    margin:0 auto;
   }
-  .footer-brand{grid-area:brand;}
-  .footer-col.abouts{grid-area:abouts;}
-  .footer-col.company{grid-area:company;}
-  .footer-col.contact{grid-area:contact;}
+
+  .footer-col.contact{
+    grid-column:1 / -1;
+    justify-self:center;
+    margin-top:60px;
+  }
+
 }
-
-
 @media(max-width:1024px){
   .footer-inner {
     padding-left:24px;
@@ -162,59 +162,47 @@
 }
 
 
-@media(max-width:768px){
-  .footer-inner {
-      padding-left:20px;
-      padding-right:20px;
+ @media(max-width:768px){
+
+  .footer-inner{
+    padding-left:20px;
+    padding-right:20px;
   }
+
   .footer-grid{
-      grid-template-columns:1fr 1fr;
-      grid-template-areas:
-        "brand abouts"
-        "company contact";
-      column-gap:24px;
-      row-gap:40px;
-      align-items:start;
-      width:100%;
-      justify-content:center;
-    text-align:center;
+    grid-template-columns: auto;
+    width:fit-content;
+    margin:0 auto;
+    row-gap:48px;
     justify-items:center;
-    align-items:center;
-    width:100%;
   }
-  .footer-brand {
-    margin-bottom:20px;
-    width:100%;
+
+  .footer-brand{
+    width:288px;
     display:flex;
     flex-direction:column;
     align-items:center;
+    text-align:center;
   }
-  .footer-col {
-    margin-bottom:24px;
-    width:100%;
-    max-width:320px;
+
+  .footer-col{
     display:flex;
     flex-direction:column;
     align-items:center;
+    text-align:center;
   }
-  .footer-col h4 {
-      padding-left:12px;
-      padding-right:12px;
+
+  .footer-col.abouts{ width:133px; }
+  .footer-col.company{ width:119px; }
+  .footer-col.contact{ width:288px; }
+
   .description{
-    margin-left:auto;
-      grid-template-columns:1fr;
-      grid-template-areas:
-        "brand"
-        "abouts"
-        "company"
-        "contact";
-      row-gap:36px;
-      column-gap:0;
-      text-align:center;
-      justify-items:center;
-      align-items:center;
-      width:100%;
-      margin:0 auto;
+    width:288px;
+    margin:20px auto 0;
   }
-}
+
+  .socials{
+    justify-content:center;
+  }
+
 }
