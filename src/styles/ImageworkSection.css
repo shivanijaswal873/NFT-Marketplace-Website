@@ -1,108 +1,106 @@
 .collection{
-width:100%;
-display:flex;
-justify-content:center;
-margin-top:120px;
-  }
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin-top:120px;
+}
 
 .collection-container{
-width:100%;
-max-width:1197px;
-  padding-bottom:120px;
-
-padding:0 24px;
-box-sizing:border-box;
-color:white;
+  width:100%;
+  max-width:1197px;
+  padding:0 24px 120px;
+  box-sizing:border-box;
+  color:white;
 }
 
 .collection-header{
-text-align:center;
-margin-bottom:40px;
+  text-align:center;
+  margin-bottom:40px;
 }
 
 .collection-header h2{
-font-size:40px;
-font-weight:700;
-margin-bottom:12px;
+  font-size:40px;
+  font-weight:700;
+  margin-bottom:12px;
 }
 
 .collection-header p{
-font-size:16px;
-color:#999999;
-letter-spacing:.5px;
+  font-size:16px;
+  color:#999999;
+  letter-spacing:.5px;
 }
 
 .collection-tabs{
-margin:40px 0;
-display:flex;
-justify-content:center;
-gap:16px;
-width:100%;
+  margin:40px 0;
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  width:100%;
 }
 
 .colleaction-button{
-width:288px;
-height:40px;
-padding:0 24px;
-border-radius:10px;
-border:none;
-font-size:16px;
-font-weight:500;
-background:rgba(255,255,255,.08);
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-cursor:pointer;
-transition:.3s;
+  width:288px;
+  height:40px;
+  padding:0 24px;
+  border-radius:10px;
+  border:none;
+  font-size:16px;
+  font-weight:500;
+  background:rgba(255,255,255,.08);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:.3s;
 }
 
 .colleaction-button:hover,
 .colleaction-button.active{
-background:linear-gradient(90deg,#B75CFF,#671AE4);
+  background:linear-gradient(90deg,#B75CFF,#671AE4);
 }
 
 .collection-grid{
   display:grid;
-  grid-template-columns:repeat(3,389px);
-  justify-content:center;
-  column-gap:24px;
-  row-gap:30px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:30px 24px;
 }
 
 .card{
-width:389px;
-height:595px;
-background:#FFFFFF1A;
-border-radius:16px;
-padding:16px;
-display:flex;
-flex-direction:column;
+  width:100%;
+  max-width:389px;
+  height:595px;
+  margin:0 auto;
+  background:#FFFFFF1A;
+  border-radius:16px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
 }
 
 .card img{
-width:100%;
-height:380px;
-object-fit:cover;
-border-radius:12px;
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:12px;
 }
 
 .card-info{
-margin-top:14px;
-display:flex;
-flex-direction:column;
-flex:1;
+  margin-top:14px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
 }
 
 .top-row,
 .bottom-row{
-display:flex;
-justify-content:space-between;
-align-items:center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .bottom-row{
-margin:12px 0 18px;
+  margin:12px 0 18px;
 }
 
 .artist-name{font-size:14px;color:#cfcfcf;}
@@ -111,69 +109,60 @@ margin:12px 0 18px;
 .bid-value{font-size:18px;font-weight:700;}
 
 .bid-btn{
-width:337px;
-height:50px;
-padding:10px 20px;
-border:none;
-border-radius:10px;
-background:linear-gradient(90deg,#B75CFF,#671AE4);
-color:white;
-font-size:15px;
-font-weight:600;
-cursor:pointer;
-margin-top:auto;
-align-self:center;
+  width:337px;
+  height:50px;
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(90deg,#B75CFF,#671AE4);
+  color:white;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:auto;
+  align-self:center;
 }
 
-@media (max-width:1024px){
-.collection-container{
-width:100%;
-padding:0 24px;
-}
+@media (max-width:1200px){
 
 .collection-grid{
-grid-template-columns:repeat(2,389px);
-justify-content:center;
-gap:190px;
-}
-}
-
-@media (max-width:768px){
-.collection-container{
-padding:0 16px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
 }
 
 .collection-tabs{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
 }
 
 .colleaction-button{
-width:100%;
-height:42px;
-font-size:14px;
+  width:100%;
+}
+
+}
+
+@media (max-width:768px){
+
+.collection-container{
+  padding:0 16px 120px;
 }
 
 .collection-grid{
-grid-template-columns:1fr;
-gap:24px;
+  grid-template-columns:1fr;
 }
 
 .card{
-width:100%;
-max-width:389px;
-margin:auto;
-height:auto;
+  height:auto;
 }
 
 .card img{
-height:auto;
-aspect-ratio:1/1;
+  height:auto;
+  aspect-ratio:1/1;
 }
 
 .bid-btn{
-width:100%;
-max-width:337px;
+  width:100%;
+  max-width:337px;
 }
+
 }
