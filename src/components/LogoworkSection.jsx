@@ -44,6 +44,7 @@ export default function Logo() {
         {data.logos.map((item) => (
           <div key={item.id} className="keen-slider__slide">
             <img
+              className={`partner-logo ${item.class}`}
               src={logoMap[`../assets/${item.image}`] || item.image}
               alt={item.alt}
             />
