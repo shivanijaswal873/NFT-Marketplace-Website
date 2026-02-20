@@ -32,15 +32,23 @@
   gap: 30px;
 }
 
+
 .top-card {
-  background: rgba(255, 255, 255, 0.08);
+  width: 389.1px;
+  height: 525px;
+  background: #FFFFFF1A;
   border-radius: 16px;
   padding-bottom: 25px;
   text-align: center;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .text {
   color: grey;
   font-size: 10px;
@@ -84,17 +92,46 @@
 }
 
 .btn {
-  width: 80%;
-  margin-top: 15px;
-  padding: 12px 0;
+  width: 337.1px;
+  margin-top: 22px;
+  padding: 10px 20px;
   border-radius: 8px;
-  border: 2px solid #8f00ff;
-  background: linear-gradient(90deg, #8f00ff, #d600ff);
-  color: white;
+  border: none;
+  background: linear-gradient(90deg, #B75CFF, #671AE4);
+  color: #fff;
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .top-card {
+    width: 100%;
+    max-width: 389px;
+    height: auto;
+    min-height: 400px;
+  }
+  .btn {
+    width: 100%;
+    max-width: 337px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .top-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 350px;
+  }
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -112,7 +149,17 @@
   }
 
   .top-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
     padding-bottom: 20px;
+  }
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    padding: 10px 12px;
   }
 
   .top-card .bg {
@@ -146,16 +193,27 @@
     font-size: 13px;
   }
 
+  .top-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 220px;
+    padding-bottom: 16px;
+  }
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    font-size: 13px;
+    padding: 8px 8px;
+  }
   .top-card .bg {
     height: 200px;
   }
-
   .top-card .user {
     width: 58px;
     height: 58px;
     top: 165px;
   }
-
   .text {
     font-size: 9px;
   }
